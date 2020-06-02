@@ -1,0 +1,149 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[margin=1.0in]{geometry}
+%\usepackage[showframe]{geometry}
+\usepackage{titling}
+\geometry{top=20mm}
+\pretitle{\begingroup\centering\LARGE}
+\posttitle{\par\endgroup}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.5pt}
+\usepackage{graphicx,float}
+\usepackage{caption}
+\captionsetup[figure]{font=small}
+\usepackage{amsmath}
+\usepackage[]{siunitx}
+\usepackage{multicol}
+\usepackage{amssymb}
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\bibliographystyle{apalike}
+\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+\addbibresource{referencias.bib}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Ponce Proaño Miguel} % change this to your actual name
+\rhead{Universidad Internacional de La Rioja} % same for your university
+\rfoot{\thepage}
+% title
+\title{\textbf{Riegos ley protección de datos para la Inteligencia Artificial y desafíos}}
+\author{Ponce Miguel}
+\date{01/06/2020}
+\begin{document}
+\maketitle
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.37\textwidth]{portada}
+    \caption{Portada\cite{Phillips_2019}}
+    \label{fig:portada}
+\end{figure}
+\vspace{-0.125in}
+\tableofcontents
+\newpage
+\begin{multicols}{2}
+\section{\noindent\textbf{Motivación}}
+\indent En el año 2016 recibí la llamada de una empresa de habla inglesa, dedicada al reclutamiento de estudiantes; empezamos a intercambiar palabras sobre mi interés de estudiar en el extranjero y  la aplicación para becas, pero en esta llamada existía un peculiar interés ya que el representante repetía constantemente esta frase:  \emph{“Do you accept our conditions and fees in your process?”}; entonces surgió la duda; será que se trata de alguna beca de una Universidad; luego pregunte si debía pagar algún costo por el servicio y efectivamente me contestaron que se procesaría en 24 horas un débito por \$1200 en mi tarjeta que termina en XXXX tipo XXXX del banco XXXX. Luego, esta llamada se transformó en una odisea, ya que tuve que hablar con varios supervisores para cancelar mi  \emph{“supuesta solitud”} ya que esta empresa conocía varios de mis datos que hasta esa fecha los consideraba confidenciales por ejemplo mi edad, email, número de celular, dirección y número de tarjeta de crédito. El derecho de conservar la información de una persona como confidencial y su tratamiento se mantenga así, es parte de los derechos fundamentales de privacidad\cite{moore2010privacy}. En la actualidad existen una gran variedad de empresas dedicadas a la compra- venta de información confidencial de personas ya que su valor radica en el concepto de conocer los intereses del cliente. El desarrollo de la inteligencia artificial(IA), principalmente el campo del aprendizaje de máquina(ML), se ha convertido en una forma de realizar predicciones sobre datos y abrir un gran camino para esta ciencia\cite{kamarinou2016machine}. El auge del uso de teléfonos inteligentes, capaces de monitorear nuestras actividades diarias, que pueden influir en los comportamientos y/o hábitos de las personas\cite{perera2015big}. Por tanto, la integración del Internet de las cosas(IoT), una alta capacidad predictiva (aplicaciones basadas en IA) y potentes componentes de Big Data desencadenarán una serie de dilemas éticos y legales respecto de los derechos fundamentales de privacidad.
+\section{\noindent\textbf{Introducción}}
+\indent La inteligencia artificial depende generalmente de altos volúmenes de datos para poder realizar decisiones o predicciones inteligentes.  Para la IA se proyecta una tasa de crecimiento anual compuesta (CAGR) del 42.8\%\cite{Columbus_2020}, hasta el 2024. Adicionalmente, en la actualidad la oferta laboral para este campo ha crecido en un 29.10\% según lo reportado por la revista Forbes\cite{Columbus_2019}; Muchos sectores ven en los datos un gran potencial en la venta de sus servicios, ofertas comerciales y ganancias financieras. Se puede considerar que la IA es el componente principal detrás del internet de las cosas(IoT) y del Big Data. Entonces la privacidad, la autonomía, y la manipulación de datos confidenciales son las principales problemáticas en la IA. Para la descripción de este documento se hará referencia a varios desafíos relacionados con la protección de datos según el Reglamento General en Protección de Datos(RGPD):
+\begin{itemize}
+  \item Principios fundamentales de la protección de datos.
+  \item La IA cumple con el principio de limitación del uso de los datos.
+  \item Recolección y análisis de datos utilizados como mecanismos de vigilancia.
+  \item Cajas negras y la transparencia en el procesamiento de la información.
+   \item Finalmente se abordará posibles soluciones para enfrentar estos desafíos.
+\end{itemize}
+\section{\noindent\textbf{Principios fundamentales de la protección de datos}}
+\indent En 1894, el artículo 12 de la Declaración Universal de Derechos Humanos establece principios que incluyen a la privacidad como un derecho fundamental de la humanidad\cite{bignami2007privacy}. El RGPD en la Unión Europea se encuentra vigente desde mayo 25 del 2018 y desde su aparición ha multado a varios de los gigantes de tecnología. Estas compañías, que generalmente son contraventoras, se han vistos forzadas a cambiar su comportamiento debido a estas sanciones\cite{manheim2018artificial}. Este reglamento desarrollado en la Unión Europea tiene una regulación directa sobre sus países miembros. El objetivo fue desarrollar un marco de trabajo para la protección de datos con énfasis en los derechos de las personas. La idea fundamental es que las personas tengan mayor control sobre sus datos y principalmente aquellos que los considera confidenciales, buscando crear un entorno confiable para la economía y en los mercados en línea. El RGPD propone mecanismos para el control, transparencia, auditoria y privacidad para resolver los temas relevantes a la protección de datos. 
+\begin{itemize}
+  \item \textbf{Control y consentimiento:} Este reglamento, permite que los sujetos puedan tomar mayor control sobre sus datos. Incluye, el derecho a no ser parte de procesos en la toma de decisiones automáticas (aplicaciones o software de la IA), y si su uso produce efectos legales en el sujeto. Bajo el RGPD, las organizaciones deben considerar que información van a procesar y las consecuencias que podrían tener como resultado. Es decir, las personas pueden ofrecer su información bajo estrictas reglas y términos de servicio para su uso. Esto representa un problema para la IA, ya que existen compañías que hacen minería de datos fuera del propósito inicial y consentimiento para el que fue almacenada esta información\cite{perera2015big}.
+  \item \textbf{Transparencia y auditoria:} La ley europea explícitamente establece que el procesamiento de información personal sea tratada de forma transparente. Adicionalmente, las personas tienen derecho a recibir una justificación sobre la toma de decisiones automatizadas, debido a la complejidad de los algoritmos utilizados en IA, se extraen conclusiones, clasificaciones y recomendaciones sobre las personas que pueden incurrir en efectos no deseados o desagradables. Por ejemplo, Tay Tweets (Tecnología de Microsoft) un chat-bot que utilizaba IA y causo controversia en 2016 luego enviar durante un día, mensajes racistas, y con contenido sexual en respuesta a otros usuarios de Twitter\cite{Horton_2016}. El RGPD, requiere de la IA mecanismos de auditoria, considerando que el propósito de un registro debe mantenerse durante el procesamiento de la información personal. 
+  \item \textbf{Privacidad por diseño:} Esta debe un requisito bajo el RGPD de la unión europea, entonces la privacidad de la información debe ser una parte integral y primordial dentro de cualquier organización. Adicionalmente, busca crear medidas organizativas y técnicas adecuadas para garantizar que únicamente se procese la información bajo su propósito específico.
+\end{itemize}
+\noindent\textbf{Principios}\\
+\indent A continuación, se detallan los principios de la RGPD, ver la figura ~\ref{fig:principios}.
+\begin{itemize}
+  \item[$\checkmark$] \textbf{Principio de limitación de propósito.–} Los datos deben ser recopilados para fines específicos, no pueden ser tratados de una manera nueva que sea incompatible con estos fines.
+  \item[$\checkmark$] \textbf{Principio de minimización de datos.-} El uso de datos debe ser adecuado, relevante y limitado para cumplir con los objetivos de su proceso.
+  \item[$\checkmark$] \textbf{Principio de precisión.-} La información deber ser correcta y, de ser necesario puede ser actualizada o borrada.
+  \item[$\checkmark$] \textbf{Principio relacionado con los períodos de retención de datos.-} La información no se almacena en forma identificable por períodos más largos de lo necesario una vez cumplido su propósito específico.
+  \item[$\checkmark$] \textbf{Principio de integridad y confidencialidad.-} Los datos deben ser procesados de manera que garanticen una protección adecuada de los datos personales.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{principios}
+    \caption{Principios RGPD.}
+    \label{fig:principios}
+\end{figure}
+\section{Riegos y desafíos para la IA}
+\subsection{\noindent\textbf{IA y el principio de limitación del uso de los datos}}
+\indent El propósito de limitación implica que el procesamiento de información personal debe estar claramente definido que datos serán almacenados y procesados. Este requisito es esencial para mantener al sujeto como el responsable sobre el uso de su información. Adicionalmente, la forma en la que se procesará la información deber ser explicada de forma clara y precisa hacia el sujeto dueño de esta para que pueda realizar una acción de consentimiento o no sobre su uso\cite{ia_it_2018}. En el desarrollo de aplicaciones basadas en IA, generalmente se requiere de diferentes tipos de información personal, pero en muchas ocasiones se recoge esta información para otros propósitos. Por ejemplo, el en Ecuador el sistema de seguridad social permite el registro de cuentas bancarias para realizar depósitos de préstamos respecto de los fondos de reserva y/o de pensiones jubilares; otras instituciones públicas pueden realizar cruces y se pueden establecer o fijar mecanismos de bloqueos de fondos sobre estas cuentas, entonces también puede estar en contra del principio de limitación del propósito de los datos\cite{iess_2012}. Para esto el RGPD requiere que los siguientes mecanismos deben ser incluidos para preservar el propósito de procesamiento de datos personales:
+\begin{itemize}
+  \item[$\circledast$] Mantener conexión entre el propósito original y cualquier otro propósito de procesamiento.
+  \item[$\circledast$] La naturaleza de los datos debe mantenerse.
+  \item[$\circledast$] El dueño de los datos debe tener claro las posibles consecuencias legales para procesamientos posteriores.
+  \item[$\circledast$] Cualquier tipo de procesamiento original o nuevo debe mantener apropiados esquemas de seguridad.
+\end{itemize}
+\subsection{\noindent\textbf{Recolección y análisis de datos utilizados como mecanismos de vigilancia}}
+\indent Debido al valor de los datos, empresas de tecnología usualmente tratan de tomar distancia de la legalidad y ética en sus acciones tratando de conseguir datos y crear modelos más exactos y precisos. Por ejemplo, existen, centros de recolección y de servicios de datos en la nube los cuales almacenan grandes cantidades de datos entregados por la IoT, es decir son sistemas de vigilancia y rastreo alojados en una gran variedad de bases de datos\cite{chen2017robustness}. Por tanto, conjuntos de datos pertenecientes a un individuo pueden estar distribuidos en una infinidad de servidores. La información procesada es valiosa en el mercado, debido a las formas de influenciar directamente sobre las opciones de compra u otras decisiones en las personas. Existe una gran variedad de aplicaciones de la IA que hace uso de la demografía financiera, social, cultural, ética y otras, es decir un perfilamiento puede contribuir a que estas aplicaciones obtengan una ventaja competitiva. 
+Por otro lado, existen los ecosistemas de vigilancia que están compuestos de componentes basados en la psicología y sistemas de vigilancia en línea\cite{cukier2013rise}. El problema radica en una apariencia de ofrecer productos y servicios gratuitos, por ejemplo, WhatsApp, Facebook, Gmail entre otros, los cuales se convierten en utilidades familiares y disponibles en varias plataformas y dispositivos con sensores capaces de recolectar una gran cantidad de información. Por ende, no se podría hablar de una verdadera privacidad en el internet, en los dispositivos y herramientas, ya que se los puede considerar como mecanismos ilegales de recolección de información privada. Además, surgen nuevos negocios que buscan el acceso a esta información de forma ilegal debido a que su costo es más accesible que realizarlo de forma legal. Entonces la IA, cuyo fin es tratar de que los datos tengan un uso en función de una necesidad, puede convertirse en una herramienta utilizada por hackers para tratar de romper los esquemas de seguridad. La IA también convierte estos datos en bruto, recopilados por la IoT y los sistemas de vigilancia, en una inteligencia significativa que puede ser utilizada tanto por compañías con fines legales como aquellas con fines perniciosos\cite{chen2017robustness}. En particular para el ML, entre más datos se pueda capturar estos algoritmos son más rápidos y precisos. Estos promueven la captura de más datos; luego la frase "Los datos son el nuevo petróleo" sugiere que estos son un producto valioso del cual se puede obtener un gran rendimiento financiero\cite{manheim2018artificial}.
+La Unión europea a través del RGPD en sus artículos 35 y 36 establece. Antes de que cualquier información sea procesada debe considerar todos los posibles impactos y riesgos que puedan surgir sobre los principios fundamentales de libertad y privacidad de una persona. Si el riesgo del aseguramiento de la información es alto la persona tiene la obligación de iniciar discusiones y exponer su problemática con la Autoridad de Protección de Datos.\\
+\subsection{\noindent\textbf{Cajas negras y la transparencia en el procesamiento de la información}}
+\indent La RGPD en los ámbitos de control y recolección de datos, solicita que los sujetos sean informados sobre el cómo su información será utilizada, independientemente de quien se encargue de recolectarla. Esta debe estar fácilmente disponible y permitirá a los interesados ejercer sus derechos de conformidad con lo establecido en la ley. Muchos de los algoritmos usados por la IA, se consideran como cajas negras debido a que realmente resulta imposible explicar cómo la información fue correlada y decorrelada para obtener pesos específicos en las variables que fueron utilizadas en un procesamiento y/o predicción\cite{bignami2007privacy}. Ciertos algoritmos utilizados en procesos de aprendizaje están relacionados con la confidencialidad y propiedad intelectual. A pesar de que la IA es compleja, el procesamiento transparente de datos personales se aplica con plenitud en el desarrollo y uso de esta ciencia.
+
+\section{\noindent\textbf{{Comentarios}}}
+\indent Los principios fundamentales de la protección de datos se consideran como claves para el desarrollo de aplicaciones basadas en IA y agregar otros que generen un mayor grado de conciencia para asumir con certeza que la información será protegida. Debemos considerar que actualmente existe mucha información distribuida en la web y que corresponde a un carácter privado y personal pero no hay mayor énfasis en tratar de identificar de forma univoca a quién la representa, para que pueda ser él quien tome decisiones concretas sobre el cómo tratar su información. Por ejemplo, la capacidad de no participar en procesos de perfilamiento para productos, obtener información sobre empresas que actualmente están procesando sus datos independientemente del contexto ya sea para investigación, marketing y otros.\\
+\indent Sobre el principio de limitación del uso de los datos la IA requiere de diferentes mecanismos que deben ser incluidos en las organizaciones para preservar la limitación del uso de datos, es importante aclarar que varias empresas ya sea por intereses particulares o buscando el bien común y de la sociedad liberan estos datos a cualquier entidad sin preservar el ámbito donde será utilizada esta información. El ML parte del IA no cumple con este principio, ya que su forma de procesar la información dependerá del tipo de algoritmo y cómo este llegue a considerar que información utilizar para realizar sus predicciones. Es importante recalcar que incluso el conjunto de variables no puede ser determinado ya que este tomará tantas variables como necesite para predecir o categorizar un evento. Inclusive se puede considerar que estos algoritmos no son más o menos objetivos que quienes los diseñan. Por ejemplo, un modelo puede ser incorrecto o discriminatorio si los datos de entrenamiento muestran una imagen sesgada o no tienen relevancia para el contexto, entonces el uso de datos personales sería contrario al principio de equidad.\\
+\indent La recolección y análisis de datos utilizados como mecanismos de vigilancia es un reto muy complejo a ser enfrentado por la IA y los reglamentos que la gobiernan, debido a que no solo hablamos de los resultados luego del recolectar datos, sino también de cómo podemos aceptar o negar la captura de información desde los sensores de nuestros dispositivos.  El problema de fondo está en la capacidad predictiva sobre los datos, que su utilización puede convertirse en una nueva imagen que opaque un futuro prometedor debido al desarrollo de mecanismos de hackeo avanzados respecto de extracción y decodificación de información sin consentimiento. El resultado, puede dar paso a dos situaciones: 
+1.	Hackers que con la IA son capaces de convertirse en amenazas para cualquier individuo y opacar todos los beneficios y bondades que se busca obtener con esta ciencia. 
+2.	Por otro lado, un desarrollo enérgico de mecanismo de seguridad y control basados en IA que aseguren la protección de la confidencialidad de la información de una persona, es decir se abrirán nuevas sub ramas de esta ciencia para poder enfrentar estos ciber delincuentes.\\
+\indent Finalmente, sobre las cajas negras y la transparencia en el procesamiento de la información, estos algoritmos debido a su confidencialidad están por encima de la propia libertad de una persona respecto de entender que es lo que realmente paso durante el procesamiento de sus datos en caso de incurrir en problemas legales. Es preocupante porque si no existe una mayor regulación sobre el uso de estas cajas negras se pueden llegar a crear algo parecido a los virus que existen en los sistemas operativos y estos estarían relacionados con las cajas negras que reemplazaron los algoritmos principales y que debido a su falta de conocimiento sobre la implementación puede llevar a presumir incluso acciones fraudulentas en la toma de decisiones. Por ello considero que su funcionalidad debe estar certificada por una entidad que confirme la liberación de estos algoritmos al público.
+\section{\noindent\textbf{Posibles Soluciones}}
+\indent Se puede evidenciar que el futuro de la IA, está marcado incremento de conflictos legales contra las formas de procesamiento de información confidencial, sobre sus usos y posibles repercusiones.  Una posible solución puede basarse en el esquema PKI de entidades de certificación. Esta idea surge ya que se crea un vínculo legal directo contra terceros como responsables encargados de certificar tanto los algoritmos de procesamiento y la información en sí.\\
+\noindent\textbf{Introducción a los Certificados digitales y estructura de los sistemas PKI}\\
+\indent Los certificados digitales permiten a las entidades crear mecanismos de confianza entre ellas. Debido a su principio estos certificados son válidos únicamente durante un cierto tiempo. Además, existen varios mecanismos que permites validar y analizar la revocación de un certificado por ejemplo CRL, CRS y OSCP\cite{wohlmacher2000digital}. 
+Un sistema basadas en PKI involucra a sistemas de certificación, autoridades de certificación, tercero vinculados(socios), autoridad de registro y repositorio de las claves brindan arquitecturas confiables de comunicación\cite{hunt2001pki}. A continuación, se describen sus componentes, ver la figura~\ref{fig:certficacionFigure}:
+\begin{itemize}
+  \item \textbf{Autoridad de certificación de algoritmos.-} Esta entidad se encarga de certificar algoritmos de ML que únicamente podrán procesar data encriptada y firmada con un propósito y responsable; estos serán utilizados para el esquema de procesamiento de la información. Adicionalmente incluirá periodos de vigencia de los algoritmos, los cuales deberán ser entregados bajo un esquema de encriptación análogo a la PKI.  Luego, se pretende garantizar el desafío de cajas negras y la transparencia en el procesamiento de la información, ya que esta autoridad de certificación es responsable y sujeta a términos legales respecto de cualquier problema legal resultado del procesamiento de un conjunto de datos. Ya que existe una iteración entre las dos está también puede delimitar el propósito de los datos que fueron recolectados. Deberá validar que los data sets se encuentren encriptados y cumplan con los requisitos mínimos de seguridad y que en su procesamiento no se pueda acceder a ellos directamente.
+  \item \textbf{Autoridad de certificación de datos de prueba.-} Esta entidad se encarga de generar certificados digitales para la firma y encriptación de data mediante el uso de PKI’s tradicionales, pero deberán incluir información relevante al propósito de los datos para esto hará uso de los principios del RGPD. Por ejemplo, se deberá denotar el propósito del uso de los datos y los periodos de retención del dato. Adicionalmente, esta información deber ser encriptada bajo un esquema de cifrado homomórfico (capaz de realizar una operación algebraica concreta sobre un texto original), el cual permite mantener la confidencialidad de la información sin perder los posibles usos de los conjuntos de datos\cite{hom_2019}.  Por ejemplo, la firma de responsabilidad de la empresa o persona que desea procesar los datos y la versión de algoritmos que se encuentren emitidos por una autoridad de certificación de algoritmos.
+  \item \textbf{Mecanismos de validez de certificados.–} La verificación de estos es realizada de manera análoga a través de servicios de caducidad de los certificados por estas entidades cada uno responsable de su ámbito. Lo importante es la comunicación e interacción entre estas dos entidades para reportar las versiones de los algoritmos y posibles intentos de procesar datos fuera de su ámbito. 
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{autoridades_certificacion}
+    \caption{Principios RGPD.}
+    \label{fig:certficacionFigure}
+\end{figure}
+\section{\noindent\textbf{Conclusiones}}
+\indent En conclusión, la RGPD ha desarrollado un marco legal donde el sujeto tiene un papel principal en términos legales respecto a la protección sus datos, más la combinación de una interacción entre varios mecanismos como control y consentimiento, transparencia y auditoria, privacidad por diseño, propuestos por este reglamento son una base importante que provee el sustento para el desarrollo de las tecnologías y aplicaciones basadas en IA.
+\indent Primero, se puede observar que existe todavía un largo camino por recorrer debido a las siguientes motivaciones que pueden ser efecto del uso de la IA en aplicaciones con falta de ética y tomen estos retos como ventajas oportunistas. Por ejemplo:
+\begin{itemize}
+  \item[$\circledast$] Limitación en procesos de investigación y desarrollo de la IA.
+  \item[$\circledast$] Crecimiento de negocios ilegales venta de datos IA inteligentes.
+  \item[$\circledast$] Falta de credibilidad en los dispositivos respecto de la captura indiscriminada de datos realizada por la IoT.
+  \item[$\circledast$] Carrera de riesgo y susceptible a demandas, disminución del interés de futuros profesionales.
+   \item[$\circledast$] Temor de los usuarios a utilizar sistemas basados en IA, mayores restricciones y posibles incrementos en las multas.
+\end{itemize}
+\indent En contraste el desarrollo de la IA, tiene un considerable valor agregado para la sociedad, ya que su desarrollo ha involucrado tener sistemas más inteligentes y amigables, cuyas organizaciones que los representan son más conscientes sobre los términos legales relacionados a la privacidad. Por citar algunos ejemplos:
+\begin{itemize}
+  \item[$\circledast$] 	Conciencia y responsabilidad en todos los niveles sobre el uso de la IA.
+  \item[$\circledast$] Nuevas ramas de la ciencia de la informática para el tratamiento de la problemática de los datos.
+  \item[$\circledast$] Reunir equipos multidisciplinarios que puedan considerar las consecuencias para la sociedad de los sistemas desarrollado.
+  \item[$\circledast$] Conciencia y responsabilidad sobre el uso de aplicaciones gratuitas.
+\end{itemize}
+\section{\noindent\textbf{Estudios Futuros}}
+\indent Por lo que se evidencia cada vez se presentan retos más grandes para la IA sobre el procesamiento y uso de información personal, y surge la siguiente interrogante: \emph{¿Es ético que, mediante la IA los usuarios dueños de datos confidenciales puedan acceder y detectar, esta información en servidores de la internet y así puedan realizar los principios de precisión y vigencia de la información?}
+\end{multicols}
+
+%\bibliographystyle{apacite}
+\printbibliography[heading=bibintoc,title={Referencias}]
+
+
+\clearpage
+
+%Filters bibliography
+\printbibliography[heading=subbibintoc,type=article,title={Artículos}]
+\printbibliography[heading=subbibintoc,type=book,title={Libros}]
+\printbibliography[heading=subbibintoc,type=misc,title={Otras Fuentes}]
+
+%\bibliography{referencias}
+
+\end{document}
