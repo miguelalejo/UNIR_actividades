@@ -1,0 +1,35 @@
+
+osboxes@osboxes:~/Downloads/FF-v2.3$ ./ff -o /home/osboxes/Downloads/laboratorio/domain.pddl -f /home/osboxes/Downloads/laboratorio/problem-base.pddl
+
+ff: parsing domain file
+domain 'DOMINIO-MONO' defined
+ ... done.
+ff: parsing problem file
+problem 'PROBLEMA-MONO-CAJA-BANANA' defined
+ ... done.
+
+
+
+Cueing down from goal distance:    6 into depth [1]
+                                   5            [1][2]
+                                   3            [1]
+                                   2            [1]
+                                   1            [1]
+                                   0
+
+ff: found legal plan as follows
+
+step    0: MOVER-MONO M1 P3 P2
+        1: MOVER-MONO M1 P2 P1
+        2: ENCONTRAR-MONO-CAJA M1 C1 P1
+        3: EMPUJAR-MONO-CAJA M1 C1 P1 P2
+        4: SUBIR-MONO-CAJA M1 C1 P2
+        5: RECOGER-MONO-BANANA M1 C1 B1 P2
+
+
+time spent:    0.00 seconds instantiating 18 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 11 facts and 18 actions
+               0.00 seconds creating final representation with 11 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 8 states, to a max depth of 2
+               0.00 seconds total time

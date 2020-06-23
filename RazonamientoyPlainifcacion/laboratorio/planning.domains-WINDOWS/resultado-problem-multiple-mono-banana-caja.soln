@@ -1,0 +1,55 @@
+Planning service: http://solver.planning.domains/solve
+Domain: dominio-mono, Problem: problem-multiple-mono-banana-caja
+ --- OK.
+ Match tree built with 318 nodes.
+
+PDDL problem description loaded: 
+	Domain: DOMINIO-MONO
+	Problem: PROBLEM-MULTIPLE-MONO-BANANA-CAJA
+	#Actions: 318
+	#Fluents: 72
+Landmarks found: 4
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 27
+#RP_fluents 29
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{4/4/0}:IW(1) -> [2][3][4][5]rel_plan size: 24
+#RP_fluents 29
+{4/3/1}:IW(1) -> [2][3][4][5][6]rel_plan size: 21
+#RP_fluents 26
+{4/2/2}:IW(1) -> [2][3][4][5][6][7][8][9]rel_plan size: 12
+#RP_fluents 15
+{4/1/3}:IW(1) -> [2][3][4][5][6][7][8][9]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 25
+Total time: 0.008
+Nodes generated during search: 788
+Nodes expanded during search: 605
+IW search completed
+0.00100: (mover-mono m2 p1 p2)
+0.00200: (encontrar-mono-caja m2 c3 p2)
+0.00300: (subir-mono-caja m2 c3 p2)
+0.00400: (recoger-mono-banana m2 c3 b2 p2)
+0.00500: (bajar-mono-caja m2 c3 p2)
+0.00600: (empujar-mono-caja m2 c3 p2 p3)
+0.00700: (empujar-mono-caja m2 c1 p3 p4)
+0.00800: (subir-mono-caja m2 c1 p4)
+0.00900: (recoger-mono-banana m2 c1 b3 p4)
+0.01000: (mover-mono m1 p1 p2)
+0.01100: (mover-mono m1 p2 p3)
+0.01200: (mover-mono m1 p3 p4)
+0.01300: (encontrar-mono-caja m1 c2 p4)
+0.01400: (empujar-mono-caja m1 c2 p4 p5)
+0.01500: (empujar-mono-caja m1 c2 p5 p6)
+0.01600: (subir-mono-caja m1 c2 p6)
+0.01700: (recoger-mono-banana m1 c2 b4 p6)
+0.01800: (encontrar-mono-caja m3 c2 p6)
+0.01900: (empujar-mono-caja m3 c2 p6 p5)
+0.02000: (empujar-mono-caja m3 c2 p5 p4)
+0.02100: (empujar-mono-caja m3 c1 p4 p3)
+0.02200: (empujar-mono-caja m3 c3 p3 p2)
+0.02300: (empujar-mono-caja m3 c3 p2 p1)
+0.02400: (subir-mono-caja m3 c3 p1)
+0.02500: (recoger-mono-banana m3 c3 b1 p1)
+Planner found 1 plan(s) in 0.564secs.

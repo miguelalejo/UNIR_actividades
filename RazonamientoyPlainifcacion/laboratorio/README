@@ -1,0 +1,19 @@
+Ejecuciones CON JAVA			
+java -cp ff-planner-jar-with-dependencies.jar javaff.JavaFF "C:\\Users\\PC-MIKE\\UNIR\\UNIR_actividades\\RazonamientoyPlainifcacion\\laboratorio\\domain.pddl"  "C:\\Users\\PC-MIKE\\UNIR\\UNIR_actividades\\RazonamientoyPlainifcacion\\laboratorio\\problem-base.pddl" "C:\\Users\\PC-MIKE\\UNIR\\UNIR_actividades\\RazonamientoyPlainifcacion\\laboratorio\\resultado-problem-base.soln"
+
+
+java -cp ff-planner-jar-with-dependencies.jar javaff.JavaFF "C:\\Users\\PC-MIKE\\UNIR\\UNIR_actividades\\RazonamientoyPlainifcacion\\laboratorio\\domain.pddl"  "C:\\Users\\PC-MIKE\\UNIR\\UNIR_actividades\\RazonamientoyPlainifcacion\\laboratorio\\problem-multiple-mono-banana.pddl" "C:\\Users\\PC-MIKE\\UNIR\\UNIR_actividades\\RazonamientoyPlainifcacion\\laboratorio\\resultado-problem-multiple-mono-banana.soln"
+
+
+java -cp ff-planner-jar-with-dependencies.jar javaff.JavaFF "C:\\Users\\PC-MIKE\\UNIR\\UNIR_actividades\\RazonamientoyPlainifcacion\\laboratorio\\domain.pddl"  "C:\\Users\\PC-MIKE\\UNIR\\UNIR_actividades\\RazonamientoyPlainifcacion\\laboratorio\\problem-multiple-mono-banana-caja.pddl" "C:\\Users\\PC-MIKE\\UNIR\\UNIR_actividades\\RazonamientoyPlainifcacion\\laboratorio\\resultado-problem-multiple-mono-banana-caja.soln"
+
+
+Ejecuciones Linux
+./ff -o /home/osboxes/Downloads/laboratorio/domain.pddl -f /home/osboxes/Downloads/laboratorio/problem-base.pddl
+./ff -o /home/osboxes/Downloads/laboratorio/domain.pddl -f /home/osboxes/Downloads/laboratorio/problem-multiple-mono-banana.pddl
+./ff -o /home/osboxes/Downloads/laboratorio/domain.pddl -f /home/osboxes/Downloads/laboratorio/problem-multiple-mono-banana-caja.pddl
+
+Ejecuciones Linux
+./lpg-td -o /home/osboxes/Downloads/laboratorio/domain.pddl -f /home/osboxes/Downloads/laboratorio/problem-base.pddl -n 1
+./lpg-td -o /home/osboxes/Downloads/laboratorio/domain.pddl -f /home/osboxes/Downloads/laboratorio/problem-multiple-mono-banana.pddl -n 1
+./lpg-td -o /home/osboxes/Downloads/laboratorio/domain.pddl -f /home/osboxes/Downloads/laboratorio/problem-multiple-mono-banana-caja.pddl -n 1

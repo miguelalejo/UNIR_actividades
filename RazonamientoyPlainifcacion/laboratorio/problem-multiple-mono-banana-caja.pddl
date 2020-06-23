@@ -25,17 +25,17 @@
     (localizacionCaja c2 p4)
     (localizacionCaja c3 p2)    
     (localizacionBanana b1 p1)    
-    (localizacionBanana b3 p3)
-    (localizacionBanana b4 p4)
-    (localizacionBanana b2 p6)  
+    (localizacionBanana b2 p2)
+    (localizacionBanana b3 p4)
+    (localizacionBanana b4 p6)  
 )
 
 (:goal (and
     ;todo: put the goal condition here    
-    (recojebanana m1 b1)   
+    (recojebanana m1 b4)   
     (recojebanana m2 b2) 
     (recojebanana m2 b3)
-    (recojebanana m3 b4)    
+    (recojebanana m3 b1)    
 ))
 
 ;un-comment the following line if metric is needed

@@ -1,0 +1,29 @@
+Parsed Domain file C:\Users\PC-MIKE\UNIR\UNIR_actividades\RazonamientoyPlainifcacion\laboratorio\domain.pddl successfully
+Parsed Problem file C:\Users\PC-MIKE\UNIR\UNIR_actividades\RazonamientoyPlainifcacion\laboratorio\problem-base.pddl successfully
+Grounding...
+Grounding complete
+Performing RPG reachability analysis...
+Found 9 reachable facts from 9 original facts.
+Found 18 applicable actions from 18 original actions
+Goal is: (and (recojebanana m1 b1) )
+Running FF with EHC...
+Performing search using EHC with standard helpful action filter
+6 into depth [1]
+5 into depth [1][2]
+3 into depth [1]
+2 into depth [1]
+1 into depth [1]
+Evaluated 7 states to a max depth of 2
+Found EHC plan:
+Final plan...
+0: (mover-mono m1 p3 p2)
+1: (mover-mono m1 p2 p1)
+2: (encontrar-mono-caja m1 c1 p1)
+3: (empujar-mono-caja m1 c1 p1 p2)
+4: (subir-mono-caja m1 c1 p2)
+5: (recoger-mono-banana m1 c1 b1 p2)
+Final plan length is 6
+EHC Plan Time = 0.018241589sec
+BFS Plan Time = 0.0sec
+Scheduling Time = 0.0sec
+Plan written to C:\Users\PC-MIKE\UNIR\UNIR_actividades\RazonamientoyPlainifcacion\laboratorio\resultado-problem-base.soln

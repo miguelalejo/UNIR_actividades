@@ -1,0 +1,74 @@
+
+; Command line: ./lpg-td -o /home/osboxes/Downloads/laboratorio/domain.pddl -f /home/osboxes/Downloads/laboratorio/problem-multiple-mono-banana-caja.pddl -n 1
+
+
+Parsing domain file:  domain 'DOMINIO-MONO' defined ... done.
+Parsing problem file:  problem 'PROBLEM-MULTIPLE-MONO-BANANA-CAJA' defined ... done.
+
+
+
+Modality: Incremental Planner
+
+Number of actions             :     318
+Number of conditional actions :       0
+Number of facts               :      72
+
+
+Analyzing Planning Problem:
+        Temporal Planning Problem: NO
+        Numeric Planning Problem: NO
+        Problem with Timed Initial Literals: NO
+        Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 0.00; Action cost 1.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 0.00 seconds
+
+Searching ('.' = every 50 search steps):
+ solution found:
+ first_solution_cpu_time: 0.03
+
+Plan computed:
+   Time: (ACTION) [action Duration; action Cost]
+ 0.0000: (MOVER-MONO M2 P1 P2) [D:1.00; C:1.00]
+ 0.0000: (MOVER-MONO M1 P1 P2) [D:1.00; C:1.00]
+ 0.0000: (MOVER-MONO M3 P6 P5) [D:1.00; C:1.00]
+ 1.0000: (MOVER-MONO M2 P2 P3) [D:1.00; C:1.00]
+ 1.0000: (MOVER-MONO M1 P2 P3) [D:1.00; C:1.00]
+ 1.0000: (MOVER-MONO M3 P5 P4) [D:1.00; C:1.00]
+ 2.0000: (MOVER-MONO M2 P3 P2) [D:1.00; C:1.00]
+ 2.0000: (ENCONTRAR-MONO-CAJA M1 C1 P3) [D:1.00; C:1.00]
+ 2.0000: (MOVER-MONO M3 P4 P3) [D:1.00; C:1.00]
+ 3.0000: (ENCONTRAR-MONO-CAJA M2 C3 P2) [D:1.00; C:1.00]
+ 3.0000: (EMPUJAR-MONO-CAJA M1 C1 P3 P4) [D:1.00; C:1.00]
+ 4.0000: (SUBIR-MONO-CAJA M2 C3 P2) [D:1.00; C:1.00]
+ 4.0000: (EMPUJAR-MONO-CAJA M1 C1 P4 P5) [D:1.00; C:1.00]
+ 5.0000: (RECOGER-MONO-BANANA M2 C3 B2 P2) [D:1.00; C:1.00]
+ 5.0000: (EMPUJAR-MONO-CAJA M1 C1 P5 P6) [D:1.00; C:1.00]
+ 6.0000: (BAJAR-MONO-CAJA M2 C3 P2) [D:1.00; C:1.00]
+ 6.0000: (SUBIR-MONO-CAJA M1 C1 P6) [D:1.00; C:1.00]
+ 7.0000: (EMPUJAR-MONO-CAJA M2 C3 P2 P3) [D:1.00; C:1.00]
+ 7.0000: (RECOGER-MONO-BANANA M1 C1 B4 P6) [D:1.00; C:1.00]
+ 8.0000: (EMPUJAR-MONO-CAJA M2 C3 P3 P4) [D:1.00; C:1.00]
+ 9.0000: (SUBIR-MONO-CAJA M2 C3 P4) [D:1.00; C:1.00]
+ 10.0000: (RECOGER-MONO-BANANA M2 C3 B3 P4) [D:1.00; C:1.00]
+ 11.0000: (EMPUJAR-MONO-CAJA M2 C2 P4 P3) [D:1.00; C:1.00]
+ 12.0000: (ENCONTRAR-MONO-CAJA M3 C2 P3) [D:1.00; C:1.00]
+ 13.0000: (EMPUJAR-MONO-CAJA M3 C2 P3 P2) [D:1.00; C:1.00]
+ 14.0000: (EMPUJAR-MONO-CAJA M3 C2 P2 P1) [D:1.00; C:1.00]
+ 15.0000: (SUBIR-MONO-CAJA M3 C2 P1) [D:1.00; C:1.00]
+ 16.0000: (RECOGER-MONO-BANANA M3 C2 B1 P1) [D:1.00; C:1.00]
+
+
+Solution number: 1
+Total time:      0.03
+Search time:     0.03
+Actions:         28
+Duration:        17.000
+Plan quality:    28.000
+Total Num Flips: 35
+     Plan file:       plan_/home/osboxes/Downloads/laboratorio_1.SOL

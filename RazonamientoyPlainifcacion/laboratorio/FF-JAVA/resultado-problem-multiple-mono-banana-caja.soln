@@ -1,0 +1,59 @@
+Parsed Domain file C:\Users\PC-MIKE\UNIR\UNIR_actividades\RazonamientoyPlainifcacion\laboratorio\domain.pddl successfully
+Parsed Problem file C:\Users\PC-MIKE\UNIR\UNIR_actividades\RazonamientoyPlainifcacion\laboratorio\problem-multiple-mono-banana-caja.pddl successfully
+Grounding...
+Grounding complete
+Performing RPG reachability analysis...
+Found 60 reachable facts from 60 original facts.
+Found 318 applicable actions from 318 original actions
+Goal is: (and (recojebanana m1 b4)  (recojebanana m3 b1)  (recojebanana m2 b3)  (recojebanana m2 b2) )
+Running FF with EHC...
+Performing search using EHC with standard helpful action filter
+28 into depth [1][2]
+24 into depth [1]
+23 into depth [1]
+22 into depth [1]
+21 into depth [1]
+20 into depth [1]
+19 into depth [1][2]
+18 into depth [1][2]
+17 into depth [1]
+16 into depth [1]
+Failed to find solution using EHC
+Running FF with BFS...
+Performing search using BFS
+Found BFS plan:
+Final plan...
+0: (mover-mono m3 p6 p5)
+1: (mover-mono m3 p5 p4)
+2: (encontrar-mono-caja m3 c2 p4)
+3: (mover-mono m2 p1 p2)
+4: (encontrar-mono-caja m2 c3 p2)
+5: (subir-mono-caja m2 c3 p2)
+6: (mover-mono m1 p1 p2)
+7: (encontrar-mono-caja m1 c3 p2)
+8: (recoger-mono-banana m2 c3 b2 p2)
+9: (subir-mono-caja m1 c3 p2)
+10: (empujar-mono-caja m3 c2 p4 p3)
+11: (empujar-mono-caja m3 c2 p3 p2)
+12: (empujar-mono-caja m3 c2 p2 p1)
+13: (subir-mono-caja m3 c2 p1)
+14: (recoger-mono-banana m3 c2 b1 p1)
+15: (bajar-mono-caja m2 c3 p2)
+16: (empujar-mono-caja m2 c3 p2 p3)
+17: (empujar-mono-caja m2 c3 p3 p4)
+18: (subir-mono-caja m2 c3 p4)
+19: (recoger-mono-banana m2 c3 b3 p4)
+20: (empujar-mono-caja m2 c3 p4 p5)
+21: (empujar-mono-caja m2 c3 p5 p6)
+22: (bajar-mono-caja m3 c2 p1)
+23: (empujar-mono-caja m3 c2 p1 p2)
+24: (empujar-mono-caja m1 c2 p2 p3)
+25: (empujar-mono-caja m1 c1 p3 p4)
+26: (empujar-mono-caja m1 c1 p4 p5)
+27: (empujar-mono-caja m1 c1 p5 p6)
+28: (recoger-mono-banana m1 c3 b4 p6)
+Final plan length is 29
+EHC Plan Time = 0.243642279sec
+BFS Plan Time = 0.808236876sec
+Scheduling Time = 0.0sec
+Plan written to C:\Users\PC-MIKE\UNIR\UNIR_actividades\RazonamientoyPlainifcacion\laboratorio\resultado-problem-multiple-mono-banana-caja.soln

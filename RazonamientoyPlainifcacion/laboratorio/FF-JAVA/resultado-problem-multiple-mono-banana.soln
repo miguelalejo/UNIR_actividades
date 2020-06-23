@@ -1,0 +1,45 @@
+Parsed Domain file C:\Users\PC-MIKE\UNIR\UNIR_actividades\RazonamientoyPlainifcacion\laboratorio\domain.pddl successfully
+Parsed Problem file C:\Users\PC-MIKE\UNIR\UNIR_actividades\RazonamientoyPlainifcacion\laboratorio\problem-multiple-mono-banana.pddl successfully
+Grounding...
+Grounding complete
+Performing RPG reachability analysis...
+Found 22 reachable facts from 22 original facts.
+Found 54 applicable actions from 54 original actions
+Goal is: (and (recojebanana m1 b4)  (recojebanana m2 b3)  (recojebanana m1 b1) )
+Running FF with EHC...
+Performing search using EHC with standard helpful action filter
+14 into depth [1]
+12 into depth [1][2]
+10 into depth [1]
+9 into depth [1]
+8 into depth [1]
+7 into depth [1]
+6 into depth [1]
+5 into depth [1]
+Failed to find solution using EHC
+Running FF with BFS...
+Performing search using BFS
+Found BFS plan:
+Final plan...
+0: (mover-mono m1 p1 p2)
+1: (mover-mono m2 p2 p3)
+2: (mover-mono m1 p2 p3)
+3: (encontrar-mono-caja m1 c1 p3)
+4: (subir-mono-caja m1 c1 p3)
+5: (encontrar-mono-caja m2 c1 p3)
+6: (subir-mono-caja m2 c1 p3)
+7: (recoger-mono-banana m2 c1 b3 p3)
+8: (bajar-mono-caja m1 c1 p3)
+9: (empujar-mono-caja m1 c1 p3 p2)
+10: (subir-mono-caja m1 c1 p2)
+11: (empujar-mono-caja m1 c1 p2 p1)
+12: (recoger-mono-banana m1 c1 b1 p1)
+13: (empujar-mono-caja m1 c1 p1 p2)
+14: (empujar-mono-caja m1 c1 p2 p3)
+15: (empujar-mono-caja m1 c1 p3 p4)
+16: (recoger-mono-banana m1 c1 b4 p4)
+Final plan length is 17
+EHC Plan Time = 0.045485725sec
+BFS Plan Time = 0.332459636sec
+Scheduling Time = 0.0sec
+Plan written to C:\Users\PC-MIKE\UNIR\UNIR_actividades\RazonamientoyPlainifcacion\laboratorio\resultado-problem-multiple-mono-banana.soln

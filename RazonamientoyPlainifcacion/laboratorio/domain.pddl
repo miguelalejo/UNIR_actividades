@@ -84,7 +84,7 @@
         (encimacaja ?mono ?caja)        
     )
     :effect (and 
-        (recojebanana ?mono ?banana)
+        (recojebanana ?mono ?banana)        
     )
 )
 

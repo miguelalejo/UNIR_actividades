@@ -1,0 +1,30 @@
+Planning service: http://solver.planning.domains/solve
+Domain: dominio-mono, Problem: problema-mono-caja-banana
+ --- OK.
+ Match tree built with 18 nodes.
+
+PDDL problem description loaded: 
+	Domain: DOMINIO-MONO
+	Problem: PROBLEMA-MONO-CAJA-BANANA
+	#Actions: 18
+	#Fluents: 11
+Landmarks found: 1
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 6
+#RP_fluents 6
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{1/1/0}:IW(1) -> [2][3][4][5][6][7]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 6
+Total time: -1.04308e-10
+Nodes generated during search: 14
+Nodes expanded during search: 11
+IW search completed
+0.00100: (mover-mono m1 p3 p2)
+0.00200: (mover-mono m1 p2 p1)
+0.00300: (encontrar-mono-caja m1 c1 p1)
+0.00400: (empujar-mono-caja m1 c1 p1 p2)
+0.00500: (subir-mono-caja m1 c1 p2)
+0.00600: (recoger-mono-banana m1 c1 b1 p2)
+Planner found 1 plan(s) in 1.192secs.
