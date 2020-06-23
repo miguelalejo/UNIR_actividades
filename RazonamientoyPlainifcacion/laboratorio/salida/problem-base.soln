@@ -1,0 +1,6 @@
+(mover-mono m1 p3 p2)
+(mover-mono m1 p2 p1)
+(encontrar-mono-caja m1 c1 p1)
+(empujar-mono-caja m1 c1 p1 p2)
+(subir-mono-caja m1 c1 p2)
+(recoger-mono-banana m1 c1 b1 p2)
